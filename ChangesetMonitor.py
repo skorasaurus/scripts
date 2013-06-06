@@ -3,6 +3,8 @@
 import OsmApi
 import csv
 import os
+
+# add local path of the OsmApi at: http://wiki.openstreetmap.org/wiki/PythonOsmApi
 os.chdir('~/python/\\')
 
 #nom_csv='stats-cap103-20130-03-28-05-05.csv'
@@ -72,6 +74,7 @@ min_lon=-72.266
 max_lon=-71.7
 min_lat=19.443
 max_lat=19.793
+#original list of users for reference
 users = ["Alcin Stevenson", "jean presler", "WingedStone", "Guensmork", "richelet",
          "bonhommebrunie", "jeandany", "jeune", "rlouino", "wilner",
          "lubin nancy", "wilford", "Perest Jonas", "senatusgesner",
@@ -156,7 +159,7 @@ print "date_to=" + str(date_to)
 print "bbox : min_lon=" + str(min_lon) + ", max_lon=" + str(max_lon) + ", min_lat=" + str(min_lat) + ", max_lat=" + str(max_lat)
 
 print "Checking changesets for "
-osmApi = OsmApi.OsmApi(appid = "api.openstreetmap.fr",debug=False)
+osmApi = OsmApi.OsmApi(app = "api.openstreetmap.fr",debug=True)
 csv = open(nom_csv, 'wb')
 csv.write("ekip, user, changeset, node_c,way_c,relation_c, node_m,way_m,relation_m, node_d,way_d,relation_d \n")
 csv.flush()
