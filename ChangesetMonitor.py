@@ -3,7 +3,7 @@
 import OsmApi
 import csv
 import os
-os.chdir('c:\haiti\CAP103\Statistiques\sev_pierrel\\')
+os.chdir('~/python/\\')
 
 #nom_csv='stats-cap103-20130-03-28-05-05.csv'
 nom_csv='stats-cap103-2013-05-06-05-31.csv'
